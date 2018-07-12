@@ -6,6 +6,11 @@ import java.util.Map;
 
 public class WordsCountService {
 
+    /**
+     * Solves "Word Count" issue: count all words of input text.
+     * @param input - any String variable.
+     * @return the result in Map (where key - word, value - quantity)
+     */
     public static Map<String, Integer> countWords(String input) {
         if (input == null || input.isEmpty()) {
             System.out.println("Input is empty");

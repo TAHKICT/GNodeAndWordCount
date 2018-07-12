@@ -13,6 +13,13 @@ import static org.junit.Assert.assertEquals;
 public class GNodePathServiceTest {
 
     private GNodeService service;
+    private GNode gNode;
+    private int expectedPathQuantity;
+
+    public GNodePathServiceTest(GNode gNode, int expectedPathQuantity) {
+        this.gNode = gNode;
+        this.expectedPathQuantity = expectedPathQuantity;
+    }
 
     @Before
     public void init(){
@@ -33,14 +40,6 @@ public class GNodePathServiceTest {
                 {new GNodeImpl("D", new GNode[]{gNode4, gNode4}), 4},
                 {new GNodeImpl("E", new GNode[]{gNode4, gNode4, gNode3}), 5},
         });
-    }
-
-    private GNode gNode;
-    private int expectedPathQuantity;
-
-    public GNodePathServiceTest(GNode gNode, int expectedPathQuantity) {
-        this.gNode = gNode;
-        this.expectedPathQuantity = expectedPathQuantity;
     }
 
     @Test
